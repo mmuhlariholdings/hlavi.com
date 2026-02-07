@@ -1,0 +1,163 @@
+@use "sass:color";
+.tui-section {
+    padding: $spacing-xl 0;
+    background: linear-gradient(180deg, transparent 0%, rgba($color-primary, 0.02) 100%);
+
+    @include respond-to(md) {
+        padding: $spacing-lg 0;
+    }
+}
+
+.tui-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-xl;
+    align-items: center;
+
+    @include respond-to(md) {
+        grid-template-columns: 1fr;
+        gap: $spacing-lg;
+    }
+}
+
+.tui-description {
+    h3 {
+        font-size: $font-size-2xl;
+        font-weight: 700;
+        margin-bottom: $spacing-md;
+        color: $color-text;
+    }
+
+    p {
+        font-size: $font-size-lg;
+        color: $color-text-secondary;
+        line-height: 1.7;
+        margin-bottom: $spacing-lg;
+
+        strong {
+            color: $color-primary;
+            font-weight: 600;
+        }
+    }
+}
+
+.tui-features {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    margin-bottom: $spacing-lg;
+}
+
+.tui-feature {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    font-size: $font-size-base;
+    color: $color-text;
+
+    .tui-icon {
+        font-size: 1.5rem;
+    }
+}
+
+.tui-install {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    margin-top: $spacing-lg;
+
+    .command-line {
+        flex: 0 0 auto;
+    }
+}
+
+.tui-link {
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+
+    &:hover {
+        color: color.scale($color-primary, $lightness: 10%);
+    }
+}
+
+.tui-preview {
+    @include respond-to(md) {
+        order: -1;
+    }
+}
+
+.terminal-window {
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-header {
+    background: #2d2d2d;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+    &.red {
+        background: #ff5f56;
+    }
+
+    &.yellow {
+        background: #ffbd2e;
+    }
+
+    &.green {
+        background: #27c93f;
+    }
+}
+
+.terminal-title {
+    color: #999;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.terminal-body {
+    padding: 20px;
+}
+
+.terminal-content {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #d4d4d4;
+    margin: 0;
+    white-space: pre;
+    overflow-x: auto;
+
+    .terminal-cyan {
+        color: #4fc1ff;
+    }
+
+    .terminal-yellow {
+        color: #ffbd2e;
+    }
+
+    .terminal-green {
+        color: #27c93f;
+    }
+
+    .terminal-gray {
+        color: #666;
+    }
+}
