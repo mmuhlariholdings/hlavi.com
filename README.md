@@ -1,4 +1,4 @@
-# hlavi.com
+# hlavi
 
 Official landing page for Hlavi - CLI-based kanban task management with AI agent support.
 
@@ -22,8 +22,8 @@ A quick guide on how you can get started running and working on the applicatoin 
 ### Clone
 
 ```bash
-git clone https://github.com/mmuhlariholdings/hlavi.com.git
-cd hlavi.com
+git clone https://github.com/mmuhlariholdings/hlavi.git
+cd hlavi/hlavi
 ```
 
 ### Install Dependencies
@@ -59,7 +59,7 @@ The landing page is built with vanilla HTML, CSS (compiled from SASS), and JavaS
 ### Project Structure
 
 ```
-hlavi.com/
+hlavi/
 ├── index.html          # Main HTML file
 ├── css/               # Compiled CSS
 ├── scss/              # SASS source files
